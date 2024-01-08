@@ -240,13 +240,13 @@ p2 = PolyArea((0, 6), (3, 8), (0, 10))
 p3 = PolyArea((3, 6), (9, 6), (9, 9), (6, 9))
 p4 = PolyArea((7, 0), (10, 0), (10, 4), (7, 4))
 p5 = PolyArea((1, 3), (5, 3), (6, 6), (3, 8), (0, 6))
-gt = georef((; A, B), [p1, p2, p3, p4, p5])
+pt = georef((; A, B), [p1, p2, p3, p4, p5])
 
-gt |> viewer
+pt |> viewer
 
 ## Rasterize
 
-nt = gt |> Rasterize(20, 20)
+nt = pt |> Rasterize(20, 20)
 
 nt |> viewer
 
